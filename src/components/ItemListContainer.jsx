@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = () => {
   
   const {categoriaId} = useParams()
-  console.log(categoriaId)
+  
 
   const productos = [
     { id: 1, titulo:"producto A", descripcion:"descripcion del producto A", precio:1000, categoria: "A"},
@@ -43,11 +43,10 @@ const ItemListContainer = () => {
 
 
     return (
-    <div>
-      
-      <ItemList productos={productosFiltrados}/>
-    </div>
-  )
+      <div>
+        <ItemList productos={productosFiltrados} />
+      </div>
+    )
 }
 
 export default ItemListContainer
